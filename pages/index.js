@@ -18,7 +18,11 @@ const data = [
     phoneNumber: "613-123-4536",
     instagram: "hadnsen4life",
     email: "handsen@gmail.com",
-    address: "123 stree",
+    address: "123 street",
+    rating: "4.22",
+    busiVals: [
+      'family-owned', 'lgbtq2s+', 'diversity', 'quality'
+    ]
   },
   {
     name: "Primo Landscaping",
@@ -30,6 +34,10 @@ const data = [
     instagram: "primo_land",
     email: "primo@gmail.com",
     address: "11 circle",
+    rating: "4.87",
+    busiVals: [
+      'respect', 'lgbtq2s+', 'diversity'
+    ]
   },
   {
     name: "Rule's Landscaping",
@@ -41,6 +49,10 @@ const data = [
     instagram: "WeRuleLandscaping",
     email: "rulers@gmail.com",
     address: "2 small st",
+    rating: "4.31",
+    busiVals: [
+      'family-owned', 'lgbtq2s+', 'diversity', 'asian-owned'
+    ]
   },
   {
     name: "Local Gardening Services",
@@ -52,6 +64,10 @@ const data = [
     instagram: "localgardening",
     email: "local@gmail.com",
     address: "1 up str",
+    rating: "4.98",
+    busiVals: [
+      'black-owned', 'lgbtq2s+', 'diversity', '100% customer satisfaction'
+    ]
   },
 
   {
@@ -64,6 +80,10 @@ const data = [
     address: "123 Main Street, Ottawa",
     phoneNumber: "(555) 123-4567",
     instagram: "@yardslandscaping",
+    rating: "3.78",
+    busiVals: [
+      'quality', 'lgbtq2s+', 'diversity'
+    ]
   },
   {
     name: "Fatima Salon Ottawa",
@@ -75,9 +95,13 @@ const data = [
     address: "456 Elm Street, Ottawa",
     phoneNumber: "(555) 987-6543",
     instagram: "@fatimasalonottawa",
+    rating: "5.00",
+    busiVals: [
+     'family-owned', 'lgbtq2s+', 'diversity', '100% customer satisfaction'
+    ]
   },
   {
-    name: "First Choice Haircutters Brampton",
+    name: "First Choice Haircutters",
     location: "Brampton",
     service: "Haircut",
     storeType: "Franchise",
@@ -86,6 +110,10 @@ const data = [
     address: "789 Oak Street, Brampton",
     phoneNumber: "(555) 111-2222",
     instagram: "@firstchoicebrampton",
+    rating: "2.01",
+    busiVals: [
+      "Brampton-owned", "diversity"
+    ]
   },
   {
     name: "Furelli Hair Design",
@@ -97,6 +125,10 @@ const data = [
     address: "101 Pine Street, Ottawa",
     phoneNumber: "(555) 333-4444",
     instagram: "@furellihairdesign",
+    rating: "4.43",
+    busiVals: [
+      'lgbtq2s+', 'diversity', 'sustainability'
+    ]
   },
   {
     name: "Andre Hair Design",
@@ -108,6 +140,10 @@ const data = [
     address: "202 Cedar Street, Ottawa",
     phoneNumber: "(555) 555-5555",
     instagram: "@andrehairdesign",
+    rating: "4.67",
+    busiVals: [
+      'family-owned', 'lgbtq2s+', 'diversity'
+    ]
   },
 ];
 

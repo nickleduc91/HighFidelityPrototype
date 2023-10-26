@@ -44,7 +44,8 @@ const Results = ({
         <div className="px-4">
           <Filter />
         </div>
-        <div className="px-8 pt-6">
+        {services.length > 1 ? (<p className="px-8 text-lg mt-4 font-bold">{services.length} businesses found</p>) : <p className="px-8 text-lg mt-4 font-bold">{services.length} business found</p>}
+        <div className="px-8 pt-4">
           <div className="grid grid-cols-2 gap-y-10 place-items-center">
             {services.map((item, index) => (
               <div
@@ -62,7 +63,8 @@ const Results = ({
                     <i className="ri-star-line pr-1 pl-4"></i>
                     {item.rating}/5
                   </p>
-                  <p className="pl-4">{item.storeType}</p>
+                  <p className="pl-4">{item.storeType} • <span className="font-semibold">{item.service}</span></p>
+                  <p className="pl-4"></p>
                   <p className="mt-7 pl-4 font-bold text-gray-600">
                     ${item.price} CAD
                   </p>

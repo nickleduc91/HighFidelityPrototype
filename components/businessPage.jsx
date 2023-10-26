@@ -1,11 +1,3 @@
-import Header from "@/components/header";
-
-let name = "Peaky Barbers";
-let address = "123 Hunt Club Rd.";
-let rating = "4.78";
-let storeType = "Local";
-let price = "20";
-
 const BusinessPage = ({ service }) => {
   return (
     <div className="bg-gray-100 min-h-screen px-20">
@@ -13,13 +5,13 @@ const BusinessPage = ({ service }) => {
         <h1 className="font-bold text-4xl">{service.name}</h1>
         <div className="flex flex-row text-gray-500 my-3">
           <i className="ri-star-line pr-1"></i>
-          <p>{rating} / 5</p>
+          <p>{service.rating} / 5</p>
 
           <i className="ri-map-pin-line pr-1 pl-10"></i>
-          <p>{address}</p>
+          <p>{service.address}</p>
 
           <i className="ri-building-2-line pr-1 pl-10"></i>
-          <p>{storeType}</p>
+          <p>{service.storeType}</p>
         </div>
 
         <div className="grid gap-2 grid-cols-2">
@@ -95,11 +87,35 @@ const BusinessPage = ({ service }) => {
             </div>
           </div>
           <div className="bg-white my-6 rounded-2xl shadow-lg col-span-2">
-            <div className="m-5 flex flex-row">
+            <div className="mx-5 mt-5 mb-3 flex flex-row">
               <p>
-                <b className="text-2xl">${price} CAD</b> + tax
+                <b className="text-2xl">${service.price} CAD</b> + tax
               </p>
             </div>
+            <hr className="mx-5"></hr>
+            <p className="mx-5 mt-3 font-bold text-xl">Socials</p>
+            <div className="mx-5">
+                <div className="flex flex-row my-3 text-lg">
+                    <i className="ri-phone-line mr-1 my-2 ri-xl"></i>
+                    <p className="my-1">{service.phoneNumber}</p>
+                </div>
+                <div className="flex flex-row my-3 text-lg">
+                    <i className="ri-instagram-line mr-1 my-2 ri-xl"></i>
+                    <p className="my-1">{service.instagram}</p>
+                </div>
+                <div className="flex flex-row my-3 text-lg">
+                    <i className="ri-mail-line mr-1 my-2 ri-xl"></i>
+                    <p className="my-1">{service.email}</p>
+                </div>
+            </div>
+            <p className="mx-5 mt-10 font-bold text-xl">Values</p>
+            <ul className="mx-5 mt-3 mb-6">
+                {service.busiVals.map((item, index) => (
+                    <li className="text-indigo-500 border-2 border-indigo-500 rounded-2xl px-2 bg-indigo-100 w-fit my-2" key={index}>
+                        <p>{item}</p>
+                    </li>
+                ))}
+            </ul>
           </div>
         </div>
       </div>
