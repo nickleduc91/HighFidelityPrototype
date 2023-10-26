@@ -1,15 +1,25 @@
 import Ottawa from "../pages/images/Ottawa.png";
 import Image from "next/image";
 import Filter from "./filter";
+import { useState } from "react";
 
 const Results = ({ services }) => {
+  const [sliderValue, setSliderValue] = useState(40);
+  const handleSliderChange = (event) => {
+    setSliderValue(event.target.value); // Update the slider value when it changes
+  };
   return (
     <div className="flex flex-row space-x-10 justify-center">
       <div className="bg-white h-full w-screen mb-10 rounded-2xl">
         <div className="mx-10 my-3 flex flex-row">
-          <p className="text-2xl font-bold">Distance</p>
-
-          <p className="text-2xl">3 km</p>
+          <input
+            type="range"
+            min={0}
+            max={100}
+            value={sliderValue}
+            className="w-full h-2 bg-gray-200 text-indigo-500 rounded-lg appearance-none cursor-pointer"
+            onChange={handleSliderChange}
+          />
         </div>
         <div>
           <Image

@@ -95,7 +95,7 @@ export default function Home() {
     if (storeType) {
       filters.storeType = storeType;
     }
-  
+
     // Use the filters to filter the data
     const filteredData = data.filter((item) => {
       for (const key in filters) {
@@ -105,33 +105,31 @@ export default function Home() {
       }
       return true;
     });
-  
+
     setServiceResults(filteredData);
-  
+
     setIsSearch(true);
   };
 
   const handleClickCategory = (category) => {
     // Do something with the input values (location, service, and storeType)
-    setService(category)
-  
+    setService(category);
+
     // Use the filters to filter the data
     setServiceResults(
       data
         .filter((item) => {
           // All filters are applied
-          return (
-            item.service === category 
-          );
+          return item.service === category;
         })
         .map((item) => {
           // Transform or process the filtered items here
           return item;
-        })
+        }),
     );
 
-    console.log(serviceResults)
-  
+    console.log(serviceResults);
+
     setIsSearch(true);
   };
 

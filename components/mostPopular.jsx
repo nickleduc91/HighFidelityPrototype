@@ -47,42 +47,43 @@ const services = [
   },
 ];
 
-const MostPopular = ({handleClickCategory}) => {
-
+const MostPopular = ({ handleClickCategory }) => {
   return (
     <div>
       <h1 className="font-bold text-2xl pb-10">Most Popular</h1>
       <div className="">
-      <div className="mx-auto max-w-7xl py-1">
-        <Carousel
-          ssr
-          autoPlay
-          infinite
-          deviceType=""
-          swipeable={false}
-          draggable={false}
-          showDots={false}
-          arrows={false}
-          keyBoardControl={false}
-          responsive={responsive}
-          autoPlaySpeed={4000}
-        >
-          {services.map((item, index) => (
-            <div
-              onClick={() => handleClickCategory(item.name)}
-              key={index}
-              className="flex flex-col items-center justify-center rounded-3xl border-2 h-36 w-72 bg-cover cursor-pointer"
-              style={{ backgroundImage: `url(${item.image})` }}
-            >
-              <div className="text-center bg-white px-1.5 rounded-2xl">
-                <p className="font-bold text-indigo-500 text-lg">{item.name}</p>
-                <p className="text-indigo-500">{item.nearby} nearby</p>
+        <div className="mx-auto max-w-7xl py-1">
+          <Carousel
+            ssr
+            autoPlay
+            infinite
+            deviceType=""
+            swipeable={false}
+            draggable={false}
+            showDots={false}
+            arrows={false}
+            keyBoardControl={false}
+            responsive={responsive}
+            autoPlaySpeed={4000}
+          >
+            {services.map((item, index) => (
+              <div
+                onClick={() => handleClickCategory(item.name)}
+                key={index}
+                className="flex flex-col items-center justify-center rounded-3xl border-2 h-36 w-72 bg-cover cursor-pointer"
+                style={{ backgroundImage: `url(${item.image})` }}
+              >
+                <div className="text-center bg-white px-1.5 rounded-2xl">
+                  <p className="font-bold text-indigo-500 text-lg">
+                    {item.name}
+                  </p>
+                  <p className="text-indigo-500">{item.nearby} nearby</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </Carousel>
+            ))}
+          </Carousel>
+        </div>
       </div>
-    </div>
     </div>
   );
 };

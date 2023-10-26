@@ -25,7 +25,7 @@ const services = [
   },
 ];
 
-const Recommended = ({handleClickCategory}) => {
+const Recommended = ({ handleClickCategory }) => {
   return (
     <div className="">
       <h1 className="font-bold text-2xl pb-10 text-center">Recommended</h1>
