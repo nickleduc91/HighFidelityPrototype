@@ -52,49 +52,46 @@ const data = [
   },
 ];
 
-const Header = () => {
-  const [location, setLocation] = useState("");
-  const [service, setService] = useState("");
-  const [storeType, setStoreType] = useState("");
+const Filter = () => {
+  const [price, setPrice] = useState("");
+  const [rating, setRating] = useState("");
+  const [values, setValues] = useState("");
   const handleSearch = () => {
     // Do something with the input values (location, service, and storeType)
-    console.log("Location:", location);
-    console.log("Service:", service);
-    console.log("Store Type:", storeType);
+    console.log("Price:", price);
+    console.log("Rating:", rating);
+    console.log("Values:", values);
   };
   return (
     <header>
-      <nav className="bg-gray-100 px-4 py-2.5">
+      <nav className="pl-8 pt-4 pb-2.5">
         <div className="flex justify-between items-center mx-auto max-w-screen-xl">
-          <div className="flex items-center">
-            <i className="ri-search-eye-fill ri-3x text-indigo-500" />
-          </div>
           <div className="border-2 rounded-full p-4 bg-white shadow-xl px-6">
             <form className="flex flex-row divide-x-2 divide-gray-200">
-              <div className="mr-20 hover:text-indigo-500">
-                <i className="ri-map-pin-line ri-lg"></i>
+              <div className="mr-5 hover:text-indigo-500 flex flex-row">
+                <i class="ri-money-dollar-circle-line ri-lg pt-1"></i>
                 <input
                   className="pl-2 bg-transparent transition ease-in-out focus:outline-none"
-                  placeholder="Location"
-                  value={location}
+                  placeholder="Price"
+                  value={price}
                   onChange={(e) => setLocation(e.target.value)}
                 />
               </div>
-              <div className="mr-20 hover:text-indigo-500 pl-2">
-                <i className="ri-service-line ri-lg"></i>
+              <div className="mr-5 hover:text-indigo-500 pl-2">
+                <i class="ri-star-line ri-lg pt-1"></i>
                 <input
                   className="pl-2 bg-transparent transition ease-in-out focus:outline-none"
-                  placeholder="Service"
-                  value={service}
+                  placeholder="Rating"
+                  value={rating}
                   onChange={(e) => setService(e.target.value)}
                 />
               </div>
-              <div className="mr-20 hover:text-indigo-500 pl-2">
-                <i className="ri-building-2-line ri-lg"></i>
+              <div className="mr-5 hover:text-indigo-500 pl-2">
+                <i class="ri-emotion-line ri-lg pt-1"></i>
                 <input
                   className="pl-2 bg-transparent transition ease-in-out focus:outline-none"
-                  placeholder="Store Type"
-                  value={storeType}
+                  placeholder="Values"
+                  value={values}
                   onChange={(e) => setStoreType(e.target.value)}
                 />
               </div>
@@ -106,17 +103,10 @@ const Header = () => {
               </div>
             </form>
           </div>
-          <div className="flex items-center border-2 rounded-full p-4 bg-white shadow-xl">
-            <div className="flex flex-row">
-              <span className="ml-2">EN</span>
-              <i className="pl-4 ri-user-3-line text-indigo-500 ri-lg pt-1 px-2"></i>
-            </div>
-          </div>
         </div>
       </nav>
-      <hr className="my-6"></hr>
     </header>
   );
 };
 
-export default Header;
+export default Filter;
