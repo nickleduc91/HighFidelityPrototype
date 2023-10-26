@@ -10,17 +10,20 @@ const services = [
   {
     name: "Personal Trainers",
     nearby: 13,
-    image: "https://athleticsweekly.com/wp-content/uploads/2020/11/PT-image-via-OriGym.jpg"
+    image:
+      "https://athleticsweekly.com/wp-content/uploads/2020/11/PT-image-via-OriGym.jpg",
   },
   {
     name: "Perosnal Chefs",
     nearby: 8,
-    image: "https://secret-ingredient.com/wp-content/uploads/2017/05/Privatechef_CW.jpg"
+    image:
+      "https://secret-ingredient.com/wp-content/uploads/2017/05/Privatechef_CW.jpg",
   },
   {
     name: "Hockey Trainers",
     nearby: 9,
-    image: "https://cdn1.sportngin.com/attachments/photo/7052/6828/NCCP_large.png"
+    image:
+      "https://cdn1.sportngin.com/attachments/photo/7052/6828/NCCP_large.png",
   },
 ];
 

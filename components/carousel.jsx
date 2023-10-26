@@ -31,7 +31,7 @@ export const ImageCarousel = ({ services }) => {
           swipeable={false}
           draggable={false}
           showDots={false}
-          autoPlay
+          autoPlay={false}
           arrows={false}
           keyBoardControl={false}
           responsive={responsive}
