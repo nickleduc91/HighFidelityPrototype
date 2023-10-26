@@ -10,13 +10,20 @@ const Header = ({
   location,
   storeType,
 }) => {
+
+  const handleClickLogo = () => {
+    handleSetIsSearch(false)
+    handleSetLocation("")
+    handleSetService("")
+    handleSetStoreType("")
+  }
   return (
     <header>
       <nav className="bg-gray-100 px-4 py-2.5">
         <div className="flex justify-between items-center mx-auto max-w-screen-xl">
           <div className="flex items-center">
             <i
-              onClick={() => handleSetIsSearch(false)}
+              onClick={() => handleClickLogo()}
               className="ri-search-eye-fill ri-3x text-indigo-500"
             />
           </div>

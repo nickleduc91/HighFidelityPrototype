@@ -1,8 +1,28 @@
-import Carousel from "@/components/carousel";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 4,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 640 },
+    items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 640, min: 0 },
+    items: 2,
+  },
+};
 
 const services = [
   {
-    name: "Haircuts",
+    name: "Haircut",
     nearby: 25,
     image:
       "https://cdn.britannica.com/53/136653-050-E8AE6706/Hairdresser-curling-iron.jpg",
@@ -27,11 +47,42 @@ const services = [
   },
 ];
 
-const MostPopular = () => {
+const MostPopular = ({handleClickCategory}) => {
+
   return (
     <div>
       <h1 className="font-bold text-2xl pb-10">Most Popular</h1>
-      <Carousel services={services} />
+      <div className="">
+      <div className="mx-auto max-w-7xl py-1">
+        <Carousel
+          ssr
+          autoPlay
+          infinite
+          deviceType=""
+          swipeable={false}
+          draggable={false}
+          showDots={false}
+          arrows={false}
+          keyBoardControl={false}
+          responsive={responsive}
+          autoPlaySpeed={4000}
+        >
+          {services.map((item, index) => (
+            <div
+              onClick={() => handleClickCategory(item.name)}
+              key={index}
+              className="flex flex-col items-center justify-center rounded-3xl border-2 h-36 w-72 bg-cover cursor-pointer"
+              style={{ backgroundImage: `url(${item.image})` }}
+            >
+              <div className="text-center bg-white px-1.5 rounded-2xl">
+                <p className="font-bold text-indigo-500 text-lg">{item.name}</p>
+                <p className="text-indigo-500">{item.nearby} nearby</p>
+              </div>
+            </div>
+          ))}
+        </Carousel>
+      </div>
+    </div>
     </div>
   );
 };

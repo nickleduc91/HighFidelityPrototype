@@ -25,20 +25,21 @@ const services = [
   },
 ];
 
-const Recommended = () => {
+const Recommended = ({handleClickCategory}) => {
   return (
     <div className="">
       <h1 className="font-bold text-2xl pb-10 text-center">Recommended</h1>
       <div className="grid grid-cols-2 gap-y-10 place-items-center">
         {services.map((item, index) => (
           <div
+            onClick={() => handleClickCategory(item.name)}
             key={index}
-            className="pointer-events-none flex flex-col items-center justify-center rounded-3xl border-2 h-36 w-72 bg-cover"
+            className="flex flex-col items-center justify-center rounded-3xl border-2 h-36 w-72 bg-cover cursor-pointer"
             style={{ backgroundImage: `url(${item.image})` }}
           >
-            <div className="text-center">
-              <p className="font-bold text-black text-lg">{item.name}</p>
-              <p className="">{item.nearby} nearby</p>
+            <div className="text-center bg-white px-1.5 rounded-2xl">
+              <p className="font-bold text-indigo-500 text-lg">{item.name}</p>
+              <p className="text-indigo-500">{item.nearby} nearby</p>
             </div>
           </div>
         ))}

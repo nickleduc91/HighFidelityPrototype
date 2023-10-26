@@ -38,7 +38,7 @@ const data = [
     price: "20",
   },
   {
-    name: "Yards Unlimited Landscaping Inc.",
+    name: "Yards Landscaping",
     location: "Ottawa",
     service: "Gardening",
     storeType: "Franchise",
@@ -80,30 +80,61 @@ export default function Home() {
   const [service, setService] = useState("");
   const [storeType, setStoreType] = useState("");
   const [serviceResults, setServiceResults] = useState([]);
-  let searchResults = [];
 
   const handleSearch = () => {
     // Do something with the input values (location, service, and storeType)
-    console.log("Location:", location);
-    console.log("Service:", service);
-    console.log("Store Type:", storeType);
+    const filters = {};
+
+    // Add filters to the object only if they have values
+    if (location) {
+      filters.location = location;
+    }
+    if (service) {
+      filters.service = service;
+    }
+    if (storeType) {
+      filters.storeType = storeType;
+    }
+  
+    // Use the filters to filter the data
+    const filteredData = data.filter((item) => {
+      for (const key in filters) {
+        if (item[key] !== filters[key]) {
+          return false;
+        }
+      }
+      return true;
+    });
+  
+    setServiceResults(filteredData);
+  
+    setIsSearch(true);
+  };
+
+  const handleClickCategory = (category) => {
+    // Do something with the input values (location, service, and storeType)
+    setService(category)
+  
+    // Use the filters to filter the data
     setServiceResults(
       data
         .filter((item) => {
           // All filters are applied
           return (
-            item.location === location &&
-            item.service === service &&
-            item.storeType === storeType
+            item.service === category 
           );
         })
-        .map((item, index) => {
+        .map((item) => {
           // Transform or process the filtered items here
           return item;
         })
     );
+
+    console.log(serviceResults)
+  
     setIsSearch(true);
   };
+
   return (
     <div className="bg-gray-100 min-h-screen px-20">
       <Header
@@ -122,9 +153,9 @@ export default function Home() {
         </div>
       ) : (
         <div>
-          <MostPopular />
+          <MostPopular handleClickCategory={handleClickCategory} />
           <div className="pt-14 grid grid-cols-2 divide-x-2 divide-gray-300">
-            <Recommended />
+            <Recommended handleClickCategory={handleClickCategory} />
             <Saved services={testSavedServicesData} />
           </div>
         </div>

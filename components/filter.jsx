@@ -64,14 +64,14 @@ const Filter = () => {
   };
   return (
     <header>
-      <nav className="pl-8 pt-4 pb-2.5">
+      <nav className="pt-4">
         <div className="flex justify-between items-center mx-auto max-w-screen-xl">
-          <div className="border-2 rounded-full p-4 bg-white shadow-xl px-6">
+          <div className="border-2 rounded-full p-4 bg-white shadow-xl">
             <form className="flex flex-row divide-x-2 divide-gray-200">
               <div className="mr-5 hover:text-indigo-500 flex flex-row">
                 <i className="ri-money-dollar-circle-line ri-lg pt-1"></i>
                 <input
-                  className="pl-2 bg-transparent transition ease-in-out focus:outline-none"
+                  className="pl-2 bg-transparent transition ease-in-out focus:outline-none w-32"
                   placeholder="Price"
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
@@ -80,7 +80,7 @@ const Filter = () => {
               <div className="mr-5 hover:text-indigo-500 pl-2">
                 <i className="ri-star-line ri-lg pt-1"></i>
                 <input
-                  className="pl-2 bg-transparent transition ease-in-out focus:outline-none"
+                  className="pl-2 bg-transparent transition ease-in-out focus:outline-none w-32"
                   placeholder="Rating"
                   value={rating}
                   onChange={(e) => setRating(e.target.value)}
@@ -89,7 +89,7 @@ const Filter = () => {
               <div className="mr-5 hover:text-indigo-500 pl-2">
                 <i className="ri-emotion-line ri-lg pt-1"></i>
                 <input
-                  className="pl-2 bg-transparent transition ease-in-out focus:outline-none"
+                  className="pl-2 bg-transparent transition ease-in-out focus:outline-none w-32"
                   placeholder="Values"
                   value={values}
                   onChange={(e) => setValues(e.target.value)}
