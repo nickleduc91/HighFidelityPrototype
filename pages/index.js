@@ -8,7 +8,7 @@ import Results from "@/components/results";
 
 const testSavedServicesData = [];
 
-let data = [
+const data = [
   {
     name: "Handsen Landscaping",
     location: "Ottawa",
@@ -24,7 +24,7 @@ let data = [
     price: "29",
   },
   {
-    name: "Rule's Interlock and Landscaping",
+    name: "Rule's Landscaping",
     location: "Ottawa",
     service: "Gardening",
     storeType: "Local",
@@ -76,12 +76,49 @@ let data = [
 
 export default function Home() {
   const [isSearch, setIsSearch] = useState(false);
+  const [location, setLocation] = useState("");
+  const [service, setService] = useState("");
+  const [storeType, setStoreType] = useState("");
+  const [serviceResults, setServiceResults] = useState([]);
+  let searchResults = [];
+
+  const handleSearch = () => {
+    // Do something with the input values (location, service, and storeType)
+    console.log("Location:", location);
+    console.log("Service:", service);
+    console.log("Store Type:", storeType);
+    setServiceResults(
+      data
+        .filter((item) => {
+          // All filters are applied
+          return (
+            item.location === location &&
+            item.service === service &&
+            item.storeType === storeType
+          );
+        })
+        .map((item, index) => {
+          // Transform or process the filtered items here
+          return item;
+        })
+    );
+    setIsSearch(true);
+  };
   return (
     <div className="bg-gray-100 min-h-screen px-20">
-      <Header handleSetIsSearch={setIsSearch}/>
+      <Header
+        handleSearch={handleSearch}
+        handleSetIsSearch={setIsSearch}
+        handleSetLocation={setLocation}
+        handleSetService={setService}
+        handleSetStoreType={setStoreType}
+        location={location}
+        storeType={storeType}
+        service={service}
+      />
       {isSearch ? (
         <div>
-          <Results />
+          <Results services={serviceResults} />
         </div>
       ) : (
         <div>

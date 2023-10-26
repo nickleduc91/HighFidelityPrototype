@@ -26,12 +26,12 @@ export const ImageCarousel = ({ services }) => {
       <div className="pointer-events-none mx-auto max-w-7xl py-1">
         <Carousel
           ssr
+          autoPlay
           infinite
-          deviceType="Desktop"
+          deviceType="tablet"
           swipeable={false}
           draggable={false}
           showDots={false}
-          autoPlay={false}
           arrows={false}
           keyBoardControl={false}
           responsive={responsive}

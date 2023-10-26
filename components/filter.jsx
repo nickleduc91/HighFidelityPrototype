@@ -69,30 +69,30 @@ const Filter = () => {
           <div className="border-2 rounded-full p-4 bg-white shadow-xl px-6">
             <form className="flex flex-row divide-x-2 divide-gray-200">
               <div className="mr-5 hover:text-indigo-500 flex flex-row">
-                <i class="ri-money-dollar-circle-line ri-lg pt-1"></i>
+                <i className="ri-money-dollar-circle-line ri-lg pt-1"></i>
                 <input
                   className="pl-2 bg-transparent transition ease-in-out focus:outline-none"
                   placeholder="Price"
                   value={price}
-                  onChange={(e) => setLocation(e.target.value)}
+                  onChange={(e) => setPrice(e.target.value)}
                 />
               </div>
               <div className="mr-5 hover:text-indigo-500 pl-2">
-                <i class="ri-star-line ri-lg pt-1"></i>
+                <i className="ri-star-line ri-lg pt-1"></i>
                 <input
                   className="pl-2 bg-transparent transition ease-in-out focus:outline-none"
                   placeholder="Rating"
                   value={rating}
-                  onChange={(e) => setService(e.target.value)}
+                  onChange={(e) => setRating(e.target.value)}
                 />
               </div>
               <div className="mr-5 hover:text-indigo-500 pl-2">
-                <i class="ri-emotion-line ri-lg pt-1"></i>
+                <i className="ri-emotion-line ri-lg pt-1"></i>
                 <input
                   className="pl-2 bg-transparent transition ease-in-out focus:outline-none"
                   placeholder="Values"
                   value={values}
-                  onChange={(e) => setStoreType(e.target.value)}
+                  onChange={(e) => setValues(e.target.value)}
                 />
               </div>
               <div
