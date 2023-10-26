@@ -39,7 +39,7 @@ export const ImageCarousel = ({ services }) => {
           {services.map((item, index) => (
             <div
               key={index}
-              className="pointer-events-none flex flex-col items-center justify-center rounded-3xl border-2 h-32 w-64 bg-cover backdrop-blur-xl bg-[url('/img/hero-pattern.svg')]"
+              className="pointer-events-none flex flex-col items-center justify-center rounded-3xl border-2 h-36 w-72 bg-cover"
               style={{ backgroundImage: `url(${item.image})` }}
             >
               <div className="text-center">

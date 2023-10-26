@@ -1,6 +1,4 @@
-
-
-const Saved = ({services}) => {
+const Saved = ({ services }) => {
   return (
     <div>
       <h1 className="font-bold text-2xl pb-10 text-center">Saved Services</h1>

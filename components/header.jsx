@@ -1,58 +1,10 @@
 import { useState } from "react";
-
-const data = [
-  {
-    location: "Ottawa",
-    service: "Fencing",
-    storeType: "Apartment",
-    name: "Landscape.io",
-    price: "20",
-  },
-  {
-    location: "Ottawa",
-    service: "Plumbing",
-    storeType: "Building",
-    name: "Plumber 4 life",
-    price: "20",
-  },
-  {
-    location: "Ottawa",
-    service: "Electrician",
-    storeType: "Apartment",
-    name: "Landscape.io",
-    price: "20",
-  },
-  {
-    location: "Ottawa",
-    service: "Hair Cutting",
-    storeType: "Parlor",
-    name: "Furellis",
-    price: "20",
-  },
-  {
-    location: "Ottawa",
-    service: "Hair Cutting",
-    storeType: "House",
-    name: "Landscape.io",
-    price: "20",
-  },
-  {
-    location: "Ottawa",
-    service: "Fencing",
-    storeType: "Apartment",
-    name: "Landscape.io",
-    price: "20",
-  },
-  {
-    location: "Ottawa",
-    service: "Fencing",
-    storeType: "Apartment",
-    name: "Landscape.io",
-    price: "20",
-  },
-];
-
-const Header = () => {
+/**
+ * 
+ * @param {*} param0 
+ * @returns 
+ */
+const Header = ({handleSetIsSearch}) => {
   const [location, setLocation] = useState("");
   const [service, setService] = useState("");
   const [storeType, setStoreType] = useState("");
@@ -61,13 +13,14 @@ const Header = () => {
     console.log("Location:", location);
     console.log("Service:", service);
     console.log("Store Type:", storeType);
+    handleSetIsSearch(true)
   };
   return (
     <header>
       <nav className="bg-gray-100 px-4 py-2.5">
         <div className="flex justify-between items-center mx-auto max-w-screen-xl">
           <div className="flex items-center">
-            <i className="ri-search-eye-fill ri-3x text-indigo-500" />
+            <i onClick={() => handleSetIsSearch(false)} className="ri-search-eye-fill ri-3x text-indigo-500" />
           </div>
           <div className="border-2 rounded-full p-4 bg-white shadow-xl px-6">
             <form className="flex flex-row divide-x-2 divide-gray-200">

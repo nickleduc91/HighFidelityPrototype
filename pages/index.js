@@ -3,59 +3,95 @@ import Header from "@/components/header";
 import MostPopular from "@/components/mostPopular";
 import Recommended from "@/components/recommended";
 import Saved from "@/components/saved";
+import { useState } from "react";
+import Results from "@/components/results";
 
-const testSavedServicesData = [
+const testSavedServicesData = [];
+
+let data = [
   {
-    name: "Haircuts",
-    nearby: 25,
-    image:
-      "https://cdn.britannica.com/53/136653-050-E8AE6706/Hairdresser-curling-iron.jpg",
-    address: "131 shepody circle",
-    rating: 4,
+    name: "Handsen Landscaping",
+    location: "Ottawa",
+    service: "Gardening",
     storeType: "Local",
-    price: 69,
+    price: "20",
   },
   {
-    name: "Personal Trainers",
-    nearby: 13,
-    image:
-      "https://athleticsweekly.com/wp-content/uploads/2020/11/PT-image-via-OriGym.jpg",
-    address: "131 shepody circle",
-    rating: 4,
-    storeType: "Local",
-    price: 69,
+    name: "Primo Landscaping",
+    location: "Ottawa",
+    service: "Gardening",
+    storeType: "Franchise",
+    price: "29",
   },
   {
-    name: "Perosnal Chefs",
-    nearby: 8,
-    image:
-      "https://secret-ingredient.com/wp-content/uploads/2017/05/Privatechef_CW.jpg",
-    address: "131 shepody circle",
-    rating: 4,
+    name: "Rule's Interlock and Landscaping",
+    location: "Ottawa",
+    service: "Gardening",
     storeType: "Local",
-    price: 69,
+    price: "20",
   },
   {
-    name: "Hockey Trainers",
-    nearby: 9,
-    image:
-      "https://cdn1.sportngin.com/attachments/photo/7052/6828/NCCP_large.png",
-    address: "131 shepody circle",
-    rating: 4,
+    name: "Local Gardening Services",
+    location: "Ottawa",
+    service: "Gardening",
     storeType: "Local",
-    price: 69,
+    price: "20",
+  },
+  {
+    name: "Yards Unlimited Landscaping Inc.",
+    location: "Ottawa",
+    service: "Gardening",
+    storeType: "Franchise",
+    price: "28",
+  },
+  {
+    name: "Fatima Salon Ottawa",
+    location: "Ottawa",
+    service: "Haircut",
+    storeType: "Local",
+    price: "28",
+  },
+  {
+    name: "First Choice Haircutters Brampton",
+    location: "Brampton",
+    service: "Haircut",
+    storeType: "Franchise",
+    price: "28",
+  },
+  {
+    name: "Furelli Hair Design",
+    location: "Ottawa",
+    service: "Haircut",
+    storeType: "Franchise",
+    price: "28",
+  },
+  {
+    name: "Andre Hair Design",
+    location: "Ottawa",
+    service: "Haircut",
+    storeType: "Local",
+    price: "28",
   },
 ];
 
 export default function Home() {
+  const [isSearch, setIsSearch] = useState(false);
   return (
     <div className="bg-gray-100 min-h-screen px-20">
-      <Header />
-      <MostPopular />
-      <div className="pt-14 grid grid-cols-2 divide-x-2 divide-gray-300">
-        <Recommended />
-        <Saved services={testSavedServicesData} />
-      </div>
+      <Header handleSetIsSearch={setIsSearch}/>
+      {isSearch ? (
+        <div>
+          <Results />
+        </div>
+      ) : (
+        <div>
+          <MostPopular />
+          <div className="pt-14 grid grid-cols-2 divide-x-2 divide-gray-300">
+            <Recommended />
+            <Saved services={testSavedServicesData} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

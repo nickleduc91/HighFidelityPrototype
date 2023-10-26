@@ -1,27 +1,27 @@
 const services = [
   {
-    name: "Haircuts",
-    nearby: 25,
+    name: "Soccer Trainer",
+    nearby: 14,
     image:
-      "https://cdn.britannica.com/53/136653-050-E8AE6706/Hairdresser-curling-iron.jpg",
+      "https://media.istockphoto.com/id/1199392125/photo/young-soccer-trainer-coach-explaining-tactic-on-team-sports-tactics-board-children-during.jpg?s=170667a&w=0&k=20&c=GZ5XVkZ9m0oN-xfJmvI89HhQkBC1x6ue8iR41n5QVSQ=",
   },
   {
-    name: "Personal Trainers",
-    nearby: 13,
+    name: "Plumbing",
+    nearby: 37,
     image:
-      "https://athleticsweekly.com/wp-content/uploads/2020/11/PT-image-via-OriGym.jpg",
+      "https://goodbeeplumbinganddrains.com/wp-content/uploads/2023/01/iStock-1341381755-1024x683.jpg",
   },
   {
-    name: "Perosnal Chefs",
-    nearby: 8,
+    name: "Gardening",
+    nearby: 10,
     image:
-      "https://secret-ingredient.com/wp-content/uploads/2017/05/Privatechef_CW.jpg",
+      "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/02/featured-image-landscaper.jpeg",
   },
   {
-    name: "Hockey Trainers",
-    nearby: 9,
+    name: "Tutoring",
+    nearby: 41,
     image:
-      "https://cdn1.sportngin.com/attachments/photo/7052/6828/NCCP_large.png",
+      "https://www.corpnet.com/wp-content/uploads/2019/02/Female-Tutor-Working-With-Male-Student.jpg",
   },
 ];
 
@@ -33,7 +33,7 @@ const Recommended = () => {
         {services.map((item, index) => (
           <div
             key={index}
-            className="pointer-events-none flex flex-col items-center justify-center rounded-3xl border-2 h-32 w-64 bg-cover"
+            className="pointer-events-none flex flex-col items-center justify-center rounded-3xl border-2 h-36 w-72 bg-cover"
             style={{ backgroundImage: `url(${item.image})` }}
           >
             <div className="text-center">
