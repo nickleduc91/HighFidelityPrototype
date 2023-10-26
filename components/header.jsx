@@ -114,6 +114,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
+      <hr className="my-6"></hr>
     </header>
   );
 };
