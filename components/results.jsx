@@ -3,11 +3,17 @@ import Image from "next/image";
 import Filter from "./filter";
 import { useState } from "react";
 
-const Results = ({ services }) => {
+const Results = ({ services, handleSetIsBusiness, handleSetIsSearch, findBusiness }) => {
   const [sliderValue, setSliderValue] = useState(40);
   const handleSliderChange = (event) => {
     setSliderValue(event.target.value); // Update the slider value when it changes
   };
+
+  const handleClick = (name) => {
+    findBusiness(name)
+    handleSetIsBusiness(true)
+    handleSetIsSearch(false)
+  }
   return (
     <div className="flex flex-row space-x-10 justify-center">
       <div className="bg-white h-full w-screen mb-10 rounded-2xl">
@@ -37,8 +43,9 @@ const Results = ({ services }) => {
           <div className="grid grid-cols-2 gap-y-10 place-items-center">
             {services.map((item, index) => (
               <div
+                onClick={() => handleClick(item.name)}
                 key={index}
-                className="pointer-events-none rounded-3xl border-2 h-40 w-64"
+                className="rounded-3xl border-2 h-40 w-64 cursor-pointer"
               >
                 <div className="col-span-2 bg-white h-40 rounded-3xl pt-1 shadow-lg">
                   <p className="font-bold pl-4 text-xl">{item.name}</p>

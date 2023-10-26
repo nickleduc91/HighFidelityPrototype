@@ -9,9 +9,11 @@ const Header = ({
   service,
   location,
   storeType,
+  handleSetIsBusiness
 }) => {
   const handleClickLogo = () => {
     handleSetIsSearch(false);
+    handleSetIsBusiness(false)
     handleSetLocation("");
     handleSetService("");
     handleSetStoreType("");

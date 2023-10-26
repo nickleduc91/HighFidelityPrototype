@@ -1,10 +1,10 @@
-import Image from "next/image";
 import Header from "@/components/header";
 import MostPopular from "@/components/mostPopular";
 import Recommended from "@/components/recommended";
 import Saved from "@/components/saved";
 import { useState } from "react";
 import Results from "@/components/results";
+import BusinessPage from "@/components/businessPage";
 
 const testSavedServicesData = [];
 
@@ -76,10 +76,13 @@ const data = [
 
 export default function Home() {
   const [isSearch, setIsSearch] = useState(false);
+  const [isBusiness, setIsBusiness] = useState(false);
+
   const [location, setLocation] = useState("");
   const [service, setService] = useState("");
   const [storeType, setStoreType] = useState("");
   const [serviceResults, setServiceResults] = useState([]);
+  const [business, setBusiness] = useState("");
 
   const handleSearch = () => {
     // Do something with the input values (location, service, and storeType)
@@ -128,10 +131,16 @@ export default function Home() {
         }),
     );
 
-    console.log(serviceResults);
-
     setIsSearch(true);
   };
+
+  const findBusiness = (name) => {
+    data.map((item) => {
+      if(item.name == name) {
+        setBusiness(item)
+      }
+    })
+  }
 
   return (
     <div className="bg-gray-100 min-h-screen px-20">
@@ -141,13 +150,18 @@ export default function Home() {
         handleSetLocation={setLocation}
         handleSetService={setService}
         handleSetStoreType={setStoreType}
+        handleSetIsBusiness={setIsBusiness}
         location={location}
         storeType={storeType}
         service={service}
       />
       {isSearch ? (
         <div>
-          <Results services={serviceResults} />
+          <Results services={serviceResults} handleSetIsBusiness={setIsBusiness} handleSetIsSearch={setIsSearch} findBusiness={findBusiness} />
+        </div>
+      ) : isBusiness ? (
+        <div>
+          <BusinessPage service={business}/>
         </div>
       ) : (
         <div>
