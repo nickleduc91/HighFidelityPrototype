@@ -15,6 +15,10 @@ const data = [
     service: "Gardening",
     storeType: "Local",
     price: "20",
+    phoneNumber: "613-123-4536",
+    instagram: "hadnsen4life",
+    email: "handsen@gmail.com",
+    address: "123 stree",
   },
   {
     name: "Primo Landscaping",
@@ -22,6 +26,10 @@ const data = [
     service: "Gardening",
     storeType: "Franchise",
     price: "29",
+    phoneNumber: "613-423-4686",
+    instagram: "primo_land",
+    email: "primo@gmail.com",
+    address: "11 circle",
   },
   {
     name: "Rule's Landscaping",
@@ -29,6 +37,10 @@ const data = [
     service: "Gardening",
     storeType: "Local",
     price: "20",
+    phoneNumber: "613-111-4116",
+    instagram: "WeRuleLandscaping",
+    email: "rulers@gmail.com",
+    address: "2 small st",
   },
   {
     name: "Local Gardening Services",
@@ -36,13 +48,22 @@ const data = [
     service: "Gardening",
     storeType: "Local",
     price: "20",
+    phoneNumber: "613-123-4536",
+    instagram: "localgardening",
+    email: "local@gmail.com",
+    address: "1 up str",
   },
+
   {
     name: "Yards Landscaping",
     location: "Ottawa",
     service: "Gardening",
     storeType: "Franchise",
     price: "28",
+    email: "yards@example.com",
+    address: "123 Main Street, Ottawa",
+    phoneNumber: "(555) 123-4567",
+    instagram: "@yardslandscaping",
   },
   {
     name: "Fatima Salon Ottawa",
@@ -50,6 +71,10 @@ const data = [
     service: "Haircut",
     storeType: "Local",
     price: "28",
+    email: "fatima@example.com",
+    address: "456 Elm Street, Ottawa",
+    phoneNumber: "(555) 987-6543",
+    instagram: "@fatimasalonottawa",
   },
   {
     name: "First Choice Haircutters Brampton",
@@ -57,6 +82,10 @@ const data = [
     service: "Haircut",
     storeType: "Franchise",
     price: "28",
+    email: "firstchoice@example.com",
+    address: "789 Oak Street, Brampton",
+    phoneNumber: "(555) 111-2222",
+    instagram: "@firstchoicebrampton",
   },
   {
     name: "Furelli Hair Design",
@@ -64,6 +93,10 @@ const data = [
     service: "Haircut",
     storeType: "Franchise",
     price: "28",
+    email: "furelli@example.com",
+    address: "101 Pine Street, Ottawa",
+    phoneNumber: "(555) 333-4444",
+    instagram: "@furellihairdesign",
   },
   {
     name: "Andre Hair Design",
@@ -71,6 +104,10 @@ const data = [
     service: "Haircut",
     storeType: "Local",
     price: "28",
+    email: "andre@example.com",
+    address: "202 Cedar Street, Ottawa",
+    phoneNumber: "(555) 555-5555",
+    instagram: "@andrehairdesign",
   },
 ];
 
@@ -136,11 +173,11 @@ export default function Home() {
 
   const findBusiness = (name) => {
     data.map((item) => {
-      if(item.name == name) {
-        setBusiness(item)
+      if (item.name == name) {
+        setBusiness(item);
       }
-    })
-  }
+    });
+  };
 
   return (
     <div className="bg-gray-100 min-h-screen px-20">
@@ -157,11 +194,16 @@ export default function Home() {
       />
       {isSearch ? (
         <div>
-          <Results services={serviceResults} handleSetIsBusiness={setIsBusiness} handleSetIsSearch={setIsSearch} findBusiness={findBusiness} />
+          <Results
+            services={serviceResults}
+            handleSetIsBusiness={setIsBusiness}
+            handleSetIsSearch={setIsSearch}
+            findBusiness={findBusiness}
+          />
         </div>
       ) : isBusiness ? (
         <div>
-          <BusinessPage service={business}/>
+          <BusinessPage service={business} />
         </div>
       ) : (
         <div>
