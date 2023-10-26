@@ -1,56 +1,56 @@
 import { useState } from "react";
 
 const data = [
-    {
-        location: "Ottawa",
-        service: "Fencing",
-        storeType: "Apartment",
-        name: "Landscape.io",
-        price: "20"
-    },
-    {
-        location: "Ottawa",
-        service: "Plumbing",
-        storeType: "Building",
-        name: "Plumber 4 life",
-        price: "20"
-    },
-    {
-        location: "Ottawa",
-        service: "Electrician",
-        storeType: "Apartment",
-        name: "Landscape.io",
-        price: "20"
-    },
-    {
-        location: "Ottawa",
-        service: "Hair Cutting",
-        storeType: "Parlor",
-        name: "Furellis",
-        price: "20"
-    },
-    {
-        location: "Ottawa",
-        service: "Hair Cutting",
-        storeType: "House",
-        name: "Landscape.io",
-        price: "20"
-    },
-    {
-        location: "Ottawa",
-        service: "Fencing",
-        storeType: "Apartment",
-        name: "Landscape.io",
-        price: "20"
-    },
-    {
-        location: "Ottawa",
-        service: "Fencing",
-        storeType: "Apartment",
-        name: "Landscape.io",
-        price: "20"
-    },
-]
+  {
+    location: "Ottawa",
+    service: "Fencing",
+    storeType: "Apartment",
+    name: "Landscape.io",
+    price: "20",
+  },
+  {
+    location: "Ottawa",
+    service: "Plumbing",
+    storeType: "Building",
+    name: "Plumber 4 life",
+    price: "20",
+  },
+  {
+    location: "Ottawa",
+    service: "Electrician",
+    storeType: "Apartment",
+    name: "Landscape.io",
+    price: "20",
+  },
+  {
+    location: "Ottawa",
+    service: "Hair Cutting",
+    storeType: "Parlor",
+    name: "Furellis",
+    price: "20",
+  },
+  {
+    location: "Ottawa",
+    service: "Hair Cutting",
+    storeType: "House",
+    name: "Landscape.io",
+    price: "20",
+  },
+  {
+    location: "Ottawa",
+    service: "Fencing",
+    storeType: "Apartment",
+    name: "Landscape.io",
+    price: "20",
+  },
+  {
+    location: "Ottawa",
+    service: "Fencing",
+    storeType: "Apartment",
+    name: "Landscape.io",
+    price: "20",
+  },
+];
 
 const Header = () => {
   const [location, setLocation] = useState("");

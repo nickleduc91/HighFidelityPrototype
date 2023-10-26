@@ -1,3 +1,1 @@
-const Search = () => {
-    
-}
+const Search = () => {};
