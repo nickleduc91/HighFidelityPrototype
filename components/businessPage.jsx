@@ -57,11 +57,11 @@ const BusinessPage = ({ service }) => {
             <hr className="my-6"></hr>
             <div>
               <div className="flex flex-row mb-8 mt-12 text-2xl">
-                <i className="ri-calendar-check-fill ri-xl font-bold"></i>
+                <i className="ri-calendar-check-fill ri-xl font-bold text-indigo-500"></i>
                 <p className="ml-2 font-bold text-xl">Open seven days a week</p>
               </div>
               <div className="flex flex-row mt-12 mb-12 text-2xl">
-                <i className="ri-parking-box-line ri-xl font-bold"></i>
+                <i className="ri-parking-box-line ri-xl font-bold text-indigo-500"></i>
                 <p className="ml-2 font-bold text-xl">Free Parking</p>
               </div>
             </div>
@@ -95,26 +95,29 @@ const BusinessPage = ({ service }) => {
             <hr className="mx-5"></hr>
             <p className="mx-5 mt-3 font-bold text-xl">Socials</p>
             <div className="mx-5">
-                <div className="flex flex-row my-3 text-lg">
-                    <i className="ri-phone-line mr-1 my-2 ri-xl"></i>
-                    <p className="my-1">{service.phoneNumber}</p>
-                </div>
-                <div className="flex flex-row my-3 text-lg">
-                    <i className="ri-instagram-line mr-1 my-2 ri-xl"></i>
-                    <p className="my-1">{service.instagram}</p>
-                </div>
-                <div className="flex flex-row my-3 text-lg">
-                    <i className="ri-mail-line mr-1 my-2 ri-xl"></i>
-                    <p className="my-1">{service.email}</p>
-                </div>
+              <div className="flex flex-row my-3 text-lg">
+                <i className="ri-phone-line mr-1 my-2 ri-xl text-indigo-500"></i>
+                <p className="my-1">{service.phoneNumber}</p>
+              </div>
+              <div className="flex flex-row my-3 text-lg">
+                <i className="ri-instagram-line mr-1 my-2 ri-xl text-indigo-500"></i>
+                <p className="my-1">{service.instagram}</p>
+              </div>
+              <div className="flex flex-row my-3 text-lg">
+                <i className="ri-mail-line mr-1 my-2 ri-xl text-indigo-500"></i>
+                <p className="my-1">{service.email}</p>
+              </div>
             </div>
             <p className="mx-5 mt-10 font-bold text-xl">Values</p>
             <ul className="mx-5 mt-3 mb-6">
-                {service.busiVals.map((item, index) => (
-                    <li className="text-indigo-500 border-2 border-indigo-500 rounded-2xl px-2 bg-indigo-100 w-fit my-2" key={index}>
-                        <p>{item}</p>
-                    </li>
-                ))}
+              {service.busiVals.map((item, index) => (
+                <li
+                  className="text-indigo-500 border-2 border-indigo-500 rounded-2xl px-2 bg-indigo-100 w-fit my-2"
+                  key={index}
+                >
+                  <p>{item}</p>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

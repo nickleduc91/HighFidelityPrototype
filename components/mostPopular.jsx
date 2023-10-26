@@ -34,7 +34,7 @@ const services = [
       "https://athleticsweekly.com/wp-content/uploads/2020/11/PT-image-via-OriGym.jpg",
   },
   {
-    name: "Perosnal Chefs",
+    name: "Personal Chefs",
     nearby: 8,
     image:
       "https://secret-ingredient.com/wp-content/uploads/2017/05/Privatechef_CW.jpg",
@@ -73,11 +73,9 @@ const MostPopular = ({ handleClickCategory }) => {
                 className="flex flex-col items-center justify-center rounded-3xl border-2 h-36 w-72 bg-cover cursor-pointer"
                 style={{ backgroundImage: `url(${item.image})` }}
               >
-                <div className="text-center bg-white px-1.5 rounded-2xl">
-                  <p className="font-bold text-indigo-500 text-lg">
-                    {item.name}
-                  </p>
-                  <p className="text-indigo-500">{item.nearby} nearby</p>
+                <div className="text-center bg-indigo-500 px-2 rounded-2xl hover:bg-indigo-600">
+                  <p className="font-bold text-white text-lg">{item.name}</p>
+                  <p className="text-white">{item.nearby} nearby</p>
                 </div>
               </div>
             ))}

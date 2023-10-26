@@ -44,28 +44,41 @@ const Results = ({
         <div className="px-4">
           <Filter />
         </div>
-        {services.length > 1 ? (<p className="px-8 text-lg mt-4 font-bold">{services.length} businesses found</p>) : <p className="px-8 text-lg mt-4 font-bold">{services.length} business found</p>}
+        {services.length > 1 ? (
+          <p className="px-8 text-lg mt-4 font-bold">
+            {services.length} businesses found
+          </p>
+        ) : (
+          <p className="px-8 text-lg mt-4 font-bold">
+            {services.length} business found
+          </p>
+        )}
         <div className="px-8 pt-4">
           <div className="grid grid-cols-2 gap-y-10 place-items-center">
             {services.map((item, index) => (
               <div
                 onClick={() => handleClick(item.name)}
                 key={index}
-                className="rounded-3xl border-2 h-40 w-64 cursor-pointer"
+                className="rounded-3xl h-40 w-64 cursor-pointer text-black border-1"
               >
-                <div className="col-span-2 bg-white h-40 rounded-3xl pt-1 shadow-lg">
-                  <p className="font-bold pl-4 text-xl">{item.name}</p>
+                <div className="col-span-2 bg-white hover:bg-gray-100 h-40 rounded-3xl pt-1 shadow-2xl">
+                  <p className="font-bold pl-4 text-xl text-indigo-500">
+                    {item.name}
+                  </p>
                   <p>
-                    <i className="ri-map-pin-line pr-1 pl-4"></i>
+                    <i className="text-indigo-500 ri-map-pin-line pr-1 pl-4"></i>
                     {item.address}
                   </p>
                   <p>
-                    <i className="ri-star-line pr-1 pl-4"></i>
+                    <i className="text-indigo-500 ri-star-line pr-1 pl-4"></i>
                     {item.rating}/5
                   </p>
-                  <p className="pl-4">{item.storeType} • <span className="font-semibold">{item.service}</span></p>
+                  <p className="pl-4">
+                    {item.storeType} <span className="text-black">•</span>{" "}
+                    <span className="font-semibold">{item.service}</span>
+                  </p>
                   <p className="pl-4"></p>
-                  <p className="mt-7 pl-4 font-bold text-gray-600">
+                  <p className="mt-7 pl-4 font-bold text-black">
                     ${item.price} CAD
                   </p>
                 </div>

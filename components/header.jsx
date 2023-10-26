@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const Header = ({
   handleSearch,
   handleSetIsSearch,
@@ -25,7 +23,7 @@ const Header = ({
           <div className="flex items-center">
             <i
               onClick={() => handleClickLogo()}
-              className="ri-search-eye-fill ri-3x text-indigo-500"
+              className="ri-search-eye-fill ri-3x text-indigo-500 hover:text-indigo-600 cursor-pointer"
             />
           </div>
           <div className="border-2 rounded-full p-4 bg-white shadow-xl px-6">
@@ -58,7 +56,7 @@ const Header = ({
                 />
               </div>
               <div
-                className="hover:text-indigo-500 pl-2"
+                className="hover:text-indigo-500 pl-2 cursor-pointer"
                 onClick={handleSearch}
               >
                 <i className="ri-search-line ri-lg"></i>

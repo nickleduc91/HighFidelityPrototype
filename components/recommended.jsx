@@ -37,9 +37,9 @@ const Recommended = ({ handleClickCategory }) => {
             className="flex flex-col items-center justify-center rounded-3xl border-2 h-36 w-72 bg-cover cursor-pointer"
             style={{ backgroundImage: `url(${item.image})` }}
           >
-            <div className="text-center bg-white px-1.5 rounded-2xl">
-              <p className="font-bold text-indigo-500 text-lg">{item.name}</p>
-              <p className="text-indigo-500">{item.nearby} nearby</p>
+            <div className="text-center bg-indigo-500 hover:bg-indigo-600 px-2 rounded-2xl">
+              <p className="font-bold text-white text-lg">{item.name}</p>
+              <p className="text-white">{item.nearby} nearby</p>
             </div>
           </div>
         ))}

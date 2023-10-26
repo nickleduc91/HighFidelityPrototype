@@ -20,9 +20,7 @@ const data = [
     email: "handsen@gmail.com",
     address: "123 street",
     rating: "4.22",
-    busiVals: [
-      'family-owned', 'lgbtq2s+', 'diversity', 'quality'
-    ]
+    busiVals: ["family-owned", "lgbtq2s+", "diversity", "quality"],
   },
   {
     name: "Primo Landscaping",
@@ -35,9 +33,7 @@ const data = [
     email: "primo@gmail.com",
     address: "11 circle",
     rating: "4.87",
-    busiVals: [
-      'respect', 'lgbtq2s+', 'diversity'
-    ]
+    busiVals: ["respect", "lgbtq2s+", "diversity"],
   },
   {
     name: "Rule's Landscaping",
@@ -50,9 +46,7 @@ const data = [
     email: "rulers@gmail.com",
     address: "2 small st",
     rating: "4.31",
-    busiVals: [
-      'family-owned', 'lgbtq2s+', 'diversity', 'asian-owned'
-    ]
+    busiVals: ["family-owned", "lgbtq2s+", "diversity", "asian-owned"],
   },
   {
     name: "Local Gardening Services",
@@ -66,8 +60,11 @@ const data = [
     address: "1 up str",
     rating: "4.98",
     busiVals: [
-      'black-owned', 'lgbtq2s+', 'diversity', '100% customer satisfaction'
-    ]
+      "black-owned",
+      "lgbtq2s+",
+      "diversity",
+      "100% customer satisfaction",
+    ],
   },
 
   {
@@ -81,9 +78,7 @@ const data = [
     phoneNumber: "(555) 123-4567",
     instagram: "@yardslandscaping",
     rating: "3.78",
-    busiVals: [
-      'quality', 'lgbtq2s+', 'diversity'
-    ]
+    busiVals: ["quality", "lgbtq2s+", "diversity"],
   },
   {
     name: "Fatima Salon Ottawa",
@@ -97,8 +92,11 @@ const data = [
     instagram: "@fatimasalonottawa",
     rating: "5.00",
     busiVals: [
-     'family-owned', 'lgbtq2s+', 'diversity', '100% customer satisfaction'
-    ]
+      "family-owned",
+      "lgbtq2s+",
+      "diversity",
+      "100% customer satisfaction",
+    ],
   },
   {
     name: "First Choice Haircutters",
@@ -111,9 +109,7 @@ const data = [
     phoneNumber: "(555) 111-2222",
     instagram: "@firstchoicebrampton",
     rating: "2.01",
-    busiVals: [
-      "Brampton-owned", "diversity"
-    ]
+    busiVals: ["Brampton-owned", "diversity"],
   },
   {
     name: "Furelli Hair Design",
@@ -126,9 +122,7 @@ const data = [
     phoneNumber: "(555) 333-4444",
     instagram: "@furellihairdesign",
     rating: "4.43",
-    busiVals: [
-      'lgbtq2s+', 'diversity', 'sustainability'
-    ]
+    busiVals: ["lgbtq2s+", "diversity", "sustainability"],
   },
   {
     name: "Andre Hair Design",
@@ -141,9 +135,7 @@ const data = [
     phoneNumber: "(555) 555-5555",
     instagram: "@andrehairdesign",
     rating: "4.67",
-    busiVals: [
-      'family-owned', 'lgbtq2s+', 'diversity'
-    ]
+    busiVals: ["family-owned", "lgbtq2s+", "diversity"],
   },
 ];
 
