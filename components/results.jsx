@@ -8,6 +8,13 @@ const Results = ({
   handleSetIsBusiness,
   handleSetIsSearch,
   findBusiness,
+  handleSetPrice,
+  handleSetRating,
+  handleSetValues,
+  price,
+  rating,
+  values,
+  handleSearch,
 }) => {
   const [sliderValue, setSliderValue] = useState(40);
   const handleSliderChange = (event) => {
@@ -42,7 +49,15 @@ const Results = ({
       </div>
       <div className="bg-white h-full w-screen pb-8 rounded-2xl">
         <div className="px-4">
-          <Filter />
+          <Filter
+            handleSetPrice={handleSetPrice}
+            handleSetRating={handleSetRating}
+            handleSetValues={handleSetValues}
+            price={price}
+            rating={rating}
+            values={values}
+            handleSearch={handleSearch}
+          />
         </div>
         {services.length > 1 ? (
           <p className="px-8 text-lg mt-4 font-bold">
@@ -54,15 +69,16 @@ const Results = ({
           </p>
         )}
         <div className="px-8 pt-4">
-          <div className="grid grid-cols-2 gap-y-10 place-items-center">
+          <div className="grid grid-cols-2 gap-y-4 gap-x-4 place-items-center">
             {services.map((item, index) => (
               <div
                 onClick={() => handleClick(item.name)}
                 key={index}
-                className="rounded-3xl h-40 w-64 cursor-pointer text-black border-1"
+                className="rounded-3xl h-60 w-72 cursor-pointer text-black border-1"
               >
-                <div className="col-span-2 bg-white hover:bg-gray-100 h-40 rounded-3xl pt-1 shadow-2xl">
-                  <p className="font-bold pl-4 text-xl text-indigo-500">
+                <div className="col-span-2 bg-white hover:bg-gray-100 h-52 rounded-3xl pt-1 shadow-2xl">
+                  <i className="ri-heart-line  float-right pr-2 hover:text-indigo-500"></i>
+                  <p className="font-bold pl-4 text-xl text-indigo-500 mt-2">
                     {item.name}
                   </p>
                   <p>

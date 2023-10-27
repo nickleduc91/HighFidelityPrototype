@@ -146,6 +146,11 @@ export default function Home() {
   const [location, setLocation] = useState("");
   const [service, setService] = useState("");
   const [storeType, setStoreType] = useState("");
+
+  const [price, setPrice] = useState("");
+  const [rating, setRating] = useState("");
+  const [values, setValues] = useState("");
+
   const [serviceResults, setServiceResults] = useState([]);
   const [business, setBusiness] = useState("");
 
@@ -162,6 +167,16 @@ export default function Home() {
     }
     if (storeType) {
       filters.storeType = storeType;
+    }
+
+    if (price) {
+      filters.price = price;
+    }
+    if (rating) {
+      filters.rating = rating;
+    }
+    if (values) {
+      filters.values = values;
     }
 
     // Use the filters to filter the data
@@ -199,6 +214,36 @@ export default function Home() {
     setIsSearch(true);
   };
 
+  const handleFilter = () => {
+    // Do something with the input values (location, service, and storeType)
+    const filters = {};
+
+    // Add filters to the object only if they have values
+    if (price) {
+      filters.price = price;
+    }
+    if (rating) {
+      filters.rating = rating;
+    }
+    if (values) {
+      filters.values = values;
+    }
+
+    // Use the filters to filter the data
+    const filteredData = data.filter((item) => {
+      for (const key in filters) {
+        if (item[key] !== filters[key]) {
+          return false;
+        }
+      }
+      return true;
+    });
+
+    setServiceResults(filteredData);
+
+    setIsSearch(true);
+  };
+
   const findBusiness = (name) => {
     data.map((item) => {
       if (item.name == name) {
@@ -227,6 +272,13 @@ export default function Home() {
             handleSetIsBusiness={setIsBusiness}
             handleSetIsSearch={setIsSearch}
             findBusiness={findBusiness}
+            handleSetPrice={setPrice}
+            handleSetRating={setRating}
+            handleSetValues={setValues}
+            price={price}
+            rating={rating}
+            values={values}
+            handleSearch={handleSearch}
           />
         </div>
       ) : isBusiness ? (

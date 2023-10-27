@@ -1,3 +1,7 @@
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
+
 const Header = ({
   handleSearch,
   handleSetIsSearch,
@@ -29,27 +33,51 @@ const Header = ({
           <div className="border-2 rounded-full p-4 bg-white shadow-xl px-6">
             <form className="flex flex-row divide-x-2 divide-gray-200">
               <div className="mr-20 hover:text-indigo-500">
-                <i className="ri-map-pin-line ri-lg"></i>
+                <i
+                  className={classNames(
+                    location ? "text-indigo-500" : "",
+                    "ri-map-pin-line ri-lg",
+                  )}
+                ></i>
                 <input
-                  className="pl-2 bg-transparent transition ease-in-out focus:outline-none"
+                  className={classNames(
+                    location ? "text-indigo-500" : "",
+                    "pl-2 bg-transparent transition ease-in-out focus:outline-none",
+                  )}
                   placeholder="Location"
                   value={location}
                   onChange={(e) => handleSetLocation(e.target.value)}
                 />
               </div>
               <div className="mr-20 hover:text-indigo-500 pl-2">
-                <i className="ri-service-line ri-lg"></i>
+                <i
+                  className={classNames(
+                    service ? "text-indigo-500" : "",
+                    "ri-service-line ri-lg",
+                  )}
+                ></i>
                 <input
-                  className="pl-2 bg-transparent transition ease-in-out focus:outline-none"
+                  className={classNames(
+                    service ? "text-indigo-500" : "",
+                    "pl-2 bg-transparent transition ease-in-out focus:outline-none",
+                  )}
                   placeholder="Service"
                   value={service}
                   onChange={(e) => handleSetService(e.target.value)}
                 />
               </div>
               <div className="mr-20 hover:text-indigo-500 pl-2">
-                <i className="ri-building-2-line ri-lg"></i>
+                <i
+                  className={classNames(
+                    storeType ? "text-indigo-500" : "",
+                    "ri-building-2-line ri-lg",
+                  )}
+                ></i>
                 <input
-                  className="pl-2 bg-transparent transition ease-in-out focus:outline-none"
+                  className={classNames(
+                    storeType ? "text-indigo-500" : "",
+                    "pl-2 bg-transparent transition ease-in-out focus:outline-none",
+                  )}
                   placeholder="Store Type"
                   value={storeType}
                   onChange={(e) => handleSetStoreType(e.target.value)}

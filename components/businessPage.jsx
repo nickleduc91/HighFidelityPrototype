@@ -4,13 +4,13 @@ const BusinessPage = ({ service }) => {
       <div className="mt-10">
         <h1 className="font-bold text-4xl">{service.name}</h1>
         <div className="flex flex-row text-gray-500 my-3">
-          <i className="ri-star-line pr-1"></i>
+          <i className="ri-star-line pr-1 text-indigo-500"></i>
           <p>{service.rating} / 5</p>
 
-          <i className="ri-map-pin-line pr-1 pl-10"></i>
+          <i className="ri-map-pin-line pr-1 pl-10 text-indigo-500"></i>
           <p>{service.address}</p>
 
-          <i className="ri-building-2-line pr-1 pl-10"></i>
+          <i className="ri-building-2-line pr-1 pl-10 text-indigo-500"></i>
           <p>{service.storeType}</p>
         </div>
 
