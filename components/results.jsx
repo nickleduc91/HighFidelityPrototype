@@ -69,7 +69,7 @@ const Results = ({
         </div>
       </div>
       <div className="bg-white h-full w-screen pb-8 rounded-2xl">
-        <div className="px-4">
+        <div className="px-4 flex items-center justify-center">
           <Filter
             handleSetPrice={handleSetPrice}
             handleSetRating={handleSetRating}
@@ -115,7 +115,7 @@ const Results = ({
                     <span className="font-semibold">{item.service}</span>
                   </p>
                   <p className="pl-4"></p>
-                  <p className="mt-7 pl-4 font-bold text-black">
+                  <p className="mt-12 pl-4 font-bold text-black">
                     ${item.price} CAD
                   </p>
                 </div>

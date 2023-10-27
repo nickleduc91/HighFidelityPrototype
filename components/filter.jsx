@@ -32,7 +32,7 @@ const Filter = ({
         <div className="flex justify-between items-center mx-auto max-w-screen-xl">
           <div className="border-2 rounded-full p-4 bg-white shadow-xl">
             <form className="flex flex-row divide-x-2 divide-gray-200">
-              <div className="mr-5 hover:text-indigo-500 flex flex-row">
+              <div className="hover:text-indigo-500 flex flex-row">
                 <i
                   className={classNames(
                     price ? "text-indigo-500" : "",
@@ -49,7 +49,7 @@ const Filter = ({
                   onChange={(e) => handleSetPrice(e.target.value)}
                 />
               </div>
-              <div className="mr-5 hover:text-indigo-500 pl-2">
+              <div className="hover:text-indigo-500 pl-2">
                 <i
                   className={classNames(
                     rating ? "text-indigo-500" : "",
@@ -66,7 +66,7 @@ const Filter = ({
                   onChange={(e) => handleSetRating(e.target.value)}
                 />
               </div>
-              <div className="mr-5 hover:text-indigo-500 pl-2">
+              <div className="hover:text-indigo-500 pl-2">
                 <i
                   className={classNames(
                     values ? "text-indigo-500" : "",
