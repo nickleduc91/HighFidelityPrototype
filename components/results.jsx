@@ -1,8 +1,25 @@
+// Imports for the component
 import Ottawa from "../pages/images/Ottawa.png";
 import Image from "next/image";
 import Filter from "./filter";
 import { useState } from "react";
 
+// Functional component which displays the results after a user queries for a service
+/**
+ * 
+ * @param {array} services
+ * @param {useState} handleSetIsBusiness
+ * @param {useState} handleSetIsSearch
+ * @param {function} findBusiness
+ * @param {useState} handleSetPrice 
+ * @param {useState} handleSetRating
+ * @param {useState} handleSetValues  
+ * @param {int} price 
+ * @param {int} rating 
+ * @param {array} values
+ * @param {function} handleSearch
+ * @returns 
+ */
 const Results = ({
   services,
   handleSetIsBusiness,
@@ -16,16 +33,20 @@ const Results = ({
   values,
   handleSearch,
 }) => {
+  //Handles the value for the slider above the map
   const [sliderValue, setSliderValue] = useState(40);
   const handleSliderChange = (event) => {
     setSliderValue(event.target.value); // Update the slider value when it changes
   };
 
+  //Handles the action when a user clicks one of the results
   const handleClick = (name) => {
     findBusiness(name);
     handleSetIsBusiness(true);
     handleSetIsSearch(false);
   };
+
+  //Renders the html for the component
   return (
     <div className="flex flex-row space-x-10 justify-center">
       <div className="bg-white h-full w-screen mb-10 rounded-2xl">

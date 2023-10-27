@@ -1,4 +1,12 @@
+// Functional component which displays the user's saved services on the home page
+/**
+ * 
+ * @param {array} services
+ * @returns 
+ */
 const Saved = ({ services }) => {
+
+  // Renders the html for the component
   return (
     <div>
       <h1 className="font-bold text-2xl pb-10 text-center">Saved Services</h1>

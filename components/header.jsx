@@ -1,7 +1,22 @@
+// Helper fucntion to add logic to the html class names
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+// Functional component which displays the header, this includes the top search bar and handles the user input for it
+/**
+ * 
+ * @param {function} handleSearch
+ * @param {useState} handleSetIsSearch
+ * @param {useState} handleSetLocation
+ * @param {useState} handleSetService
+ * @param {useState} handleSetStoreType 
+ * @param {string} service 
+ * @param  {string} location 
+ * @param {string} storeType
+ * @param {useState} handleSetIsBusiness
+ * @returns 
+ */
 const Header = ({
   handleSearch,
   handleSetIsSearch,
@@ -13,6 +28,8 @@ const Header = ({
   storeType,
   handleSetIsBusiness,
 }) => {
+
+  //Fucntion to reset values once logo is clicked
   const handleClickLogo = () => {
     handleSetIsSearch(false);
     handleSetIsBusiness(false);
@@ -20,6 +37,8 @@ const Header = ({
     handleSetService("");
     handleSetStoreType("");
   };
+
+  //Renders the html for the component
   return (
     <header>
       <nav className="bg-gray-100 px-4 py-2.5">

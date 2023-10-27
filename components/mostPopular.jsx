@@ -1,6 +1,8 @@
+// Import required libraries for the spinning carousel
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+// Responsive options for the carousel
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
@@ -20,6 +22,7 @@ const responsive = {
   },
 };
 
+//Services that are displayed under the most popular section within the carousel
 const services = [
   {
     name: "Haircut",
@@ -47,7 +50,15 @@ const services = [
   },
 ];
 
+// Functional component which displays the Most Popular section on the home page
+/**
+ * 
+ * @param {function} handleClickCategory
+ * @returns 
+ */
 const MostPopular = ({ handleClickCategory }) => {
+
+  //Renders the html for the component
   return (
     <div>
       <h1 className="font-bold text-2xl pb-10">Most Popular</h1>
@@ -64,7 +75,7 @@ const MostPopular = ({ handleClickCategory }) => {
             arrows={false}
             keyBoardControl={false}
             responsive={responsive}
-            autoPlaySpeed={4000}
+            autoPlaySpeed={3500}
           >
             {services.map((item, index) => (
               <div

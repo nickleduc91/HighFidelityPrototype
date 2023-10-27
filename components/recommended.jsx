@@ -1,3 +1,4 @@
+//Services that are displayed under the recommended on the home page
 const services = [
   {
     name: "Soccer Trainer",
@@ -25,7 +26,15 @@ const services = [
   },
 ];
 
+// Functional component which displays the Recommended section on the home page
+/**
+ * 
+ * @param {function} handleClickCategory
+ * @returns 
+ */
 const Recommended = ({ handleClickCategory }) => {
+
+  //Renders the html for the component
   return (
     <div className="">
       <h1 className="font-bold text-2xl pb-10 text-center">Recommended</h1>

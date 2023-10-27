@@ -1,9 +1,20 @@
-import { useState } from "react";
-
+// Helper fucntion to add logic to the html class names
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+// Functional component which displays the results filters and hadles the input for them
+/**
+ * 
+ * @param {useState} handleSetPrice
+ * @param {useState} handleSetRating
+ * @param {useState} handleSetValues
+ * @param {int} price
+ * @param {int} rating 
+ * @param {array} values 
+ * @param  {handleSearch} function 
+ * @returns 
+ */
 const Filter = ({
   handleSetPrice,
   handleSetRating,
@@ -13,6 +24,8 @@ const Filter = ({
   values,
   handleSearch,
 }) => {
+
+  //Renders the html for the component
   return (
     <header>
       <nav className="pt-4">
