@@ -5,15 +5,15 @@ function classNames(...classes) {
 
 // Functional component which displays the results filters and hadles the input for them
 /**
- * 
+ *
  * @param {useState} handleSetPrice
  * @param {useState} handleSetRating
  * @param {useState} handleSetValues
  * @param {int} price
- * @param {int} rating 
- * @param {array} values 
- * @param  {handleSearch} function 
- * @returns 
+ * @param {int} rating
+ * @param {array} values
+ * @param  {handleSearch} function
+ * @returns
  */
 const Filter = ({
   handleSetPrice,
@@ -24,7 +24,6 @@ const Filter = ({
   values,
   handleSearch,
 }) => {
-
   //Renders the html for the component
   return (
     <header>

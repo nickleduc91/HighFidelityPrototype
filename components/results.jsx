@@ -6,19 +6,19 @@ import { useState } from "react";
 
 // Functional component which displays the results after a user queries for a service
 /**
- * 
+ *
  * @param {array} services
  * @param {useState} handleSetIsBusiness
  * @param {useState} handleSetIsSearch
  * @param {function} findBusiness
- * @param {useState} handleSetPrice 
+ * @param {useState} handleSetPrice
  * @param {useState} handleSetRating
- * @param {useState} handleSetValues  
- * @param {int} price 
- * @param {int} rating 
+ * @param {useState} handleSetValues
+ * @param {int} price
+ * @param {int} rating
  * @param {array} values
  * @param {function} handleSearch
- * @returns 
+ * @returns
  */
 const Results = ({
   services,

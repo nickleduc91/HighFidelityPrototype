@@ -1,11 +1,10 @@
 // Functional component to display the business details of a specific service card when clicked
 /**
- * 
- * @param {object} service 
- * @returns 
+ *
+ * @param {object} service
+ * @returns
  */
 const BusinessPage = ({ service }) => {
-
   //Renders the html for the component
   return (
     <div className="bg-gray-100 min-h-screen px-20">

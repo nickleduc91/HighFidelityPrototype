@@ -1,11 +1,10 @@
 // Functional component which displays the user's saved services on the home page
 /**
- * 
+ *
  * @param {array} services
- * @returns 
+ * @returns
  */
 const Saved = ({ services }) => {
-
   // Renders the html for the component
   return (
     <div>

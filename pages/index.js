@@ -369,7 +369,12 @@ const data = [
     email: "hockeypro@example.com",
     address: "456 Rink Street",
     rating: "4.65",
-    busiVals: ["quality", "hockey enthusiasts", "diversity", "skill development"],
+    busiVals: [
+      "quality",
+      "hockey enthusiasts",
+      "diversity",
+      "skill development",
+    ],
   },
   {
     name: "IceKings Hockey Academy",
@@ -382,7 +387,12 @@ const data = [
     email: "icekings@example.com",
     address: "789 Ice Arena Lane",
     rating: "4.88",
-    busiVals: ["family-owned", "hockey enthusiasts", "diversity", "individualized coaching"],
+    busiVals: [
+      "family-owned",
+      "hockey enthusiasts",
+      "diversity",
+      "individualized coaching",
+    ],
   },
   {
     name: "Frozen Skills Hockey",
@@ -395,7 +405,12 @@ const data = [
     email: "frozenskills@example.com",
     address: "222 Hockey Blvd",
     rating: "4.76",
-    busiVals: ["black-owned", "hockey enthusiasts", "diversity", "elite training"],
+    busiVals: [
+      "black-owned",
+      "hockey enthusiasts",
+      "diversity",
+      "elite training",
+    ],
   },
   {
     name: "LearnRight Tutoring",
@@ -408,7 +423,12 @@ const data = [
     email: "learnright@example.com",
     address: "456 Education Street",
     rating: "4.93",
-    busiVals: ["quality", "education enthusiasts", "diversity", "individualized learning"],
+    busiVals: [
+      "quality",
+      "education enthusiasts",
+      "diversity",
+      "individualized learning",
+    ],
   },
   {
     name: "MathWiz Tutors",
@@ -421,7 +441,12 @@ const data = [
     email: "mathwiz@example.com",
     address: "789 Learning Lane",
     rating: "4.84",
-    busiVals: ["family-owned", "education enthusiasts", "diversity", "math expertise"],
+    busiVals: [
+      "family-owned",
+      "education enthusiasts",
+      "diversity",
+      "math expertise",
+    ],
   },
   {
     name: "LanguageMasters Tutoring",
@@ -434,7 +459,12 @@ const data = [
     email: "languagemasters@example.com",
     address: "222 Language Avenue",
     rating: "4.75",
-    busiVals: ["black-owned", "education enthusiasts", "diversity", "language proficiency"],
+    busiVals: [
+      "black-owned",
+      "education enthusiasts",
+      "diversity",
+      "language proficiency",
+    ],
   },
 ];
 
@@ -471,13 +501,6 @@ export default function Home() {
     if (storeType) {
       filters.storeType = storeType;
     }
-
-    if (price) {
-      filters.price = price;
-    }
-    if (rating) {
-      filters.rating = rating;
-    }
     if (values) {
       filters.values = values;
     }
@@ -489,6 +512,17 @@ export default function Home() {
           return false;
         }
       }
+
+      // Apply the price filter if it exists
+      if (price && item.price < price) {
+        return false;
+      }
+
+      // Apply the rating filter if it exists
+      if (rating && item.rating < rating) {
+        return false;
+      }
+
       return true;
     });
 
@@ -526,7 +560,7 @@ export default function Home() {
     });
   };
 
-  // Renders the HTML for the component 
+  // Renders the HTML for the component
   return (
     <div className="bg-gray-100 min-h-screen px-20">
       <Header

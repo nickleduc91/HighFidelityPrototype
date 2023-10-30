@@ -28,12 +28,11 @@ const services = [
 
 // Functional component which displays the Recommended section on the home page
 /**
- * 
+ *
  * @param {function} handleClickCategory
- * @returns 
+ * @returns
  */
 const Recommended = ({ handleClickCategory }) => {
-
   //Renders the html for the component
   return (
     <div className="">

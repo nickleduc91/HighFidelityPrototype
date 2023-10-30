@@ -52,12 +52,11 @@ const services = [
 
 // Functional component which displays the Most Popular section on the home page
 /**
- * 
+ *
  * @param {function} handleClickCategory
- * @returns 
+ * @returns
  */
 const MostPopular = ({ handleClickCategory }) => {
-
   //Renders the html for the component
   return (
     <div>

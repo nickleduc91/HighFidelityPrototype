@@ -5,17 +5,17 @@ function classNames(...classes) {
 
 // Functional component which displays the header, this includes the top search bar and handles the user input for it
 /**
- * 
+ *
  * @param {function} handleSearch
  * @param {useState} handleSetIsSearch
  * @param {useState} handleSetLocation
  * @param {useState} handleSetService
- * @param {useState} handleSetStoreType 
- * @param {string} service 
- * @param  {string} location 
+ * @param {useState} handleSetStoreType
+ * @param {string} service
+ * @param  {string} location
  * @param {string} storeType
  * @param {useState} handleSetIsBusiness
- * @returns 
+ * @returns
  */
 const Header = ({
   handleSearch,
@@ -28,7 +28,6 @@ const Header = ({
   storeType,
   handleSetIsBusiness,
 }) => {
-
   //Fucntion to reset values once logo is clicked
   const handleClickLogo = () => {
     handleSetIsSearch(false);
